@@ -1,18 +1,24 @@
 class DynamicArray {
 
   constructor(defaultSize = 4) {
-
-    // Your code here 
+    this.capacity = defaultSize;
+    this.length = 0;
+    this.data = new Array(this.capacity);
   }
 
   read(index) {
-
-    // Your code here 
+    return this.data[index];
   }
 
   push(val) {
-
-    // Your code here 
+    if(this.length === 0) {
+      this.data[0] = val;
+      this.lenght = 1;
+    }
+    else {
+      this.lenght++;
+      this.data[this.data.length - 1] = val;
+    }
   }
 
 
@@ -42,6 +48,10 @@ class DynamicArray {
   }
 
 }
+
+dynamicArr = new DynamicArray(8);
+dynamicArr.push(2);
+console.log(dynamicArr.read(0));
 
 
 module.exports = DynamicArray;

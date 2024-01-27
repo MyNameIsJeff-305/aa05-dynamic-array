@@ -57,7 +57,7 @@ describe('Dynamic Array', function () {
     expect(dynamicArr.length).to.equal(1);
     expect(dynamicArr.read(0)).to.equal(1);
 
-    dynamicArr.push(2);
+    
     expect(dynamicArr.length).to.equal(2);
     expect(dynamicArr.read(0)).to.equal(1);
     expect(dynamicArr.read(1)).to.equal(2);
